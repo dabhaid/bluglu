@@ -5,47 +5,23 @@ struct ContentView: View {
     @ObservedObject var bleManager = BLEManager()
     
     var body: some View {
-        VStack (spacing: 20) {
-            Text("Discovered Devices")
-                .font(.largeTitle)
-                .frame(maxWidth: .infinity, alignment: .center)
-            
-            List(bleManager.peripherals) {
-                peripheral in HStack(alignment: .top, spacing: 10) {
-                    VStack(alignment: .leading) {
-                        Text(peripheral.name)
-                        Text(peripheral.uuid.uuidString).font(.subheadline)
-                    }
-                    Spacer()
-                    Text("(\(String(peripheral.rssi)))")
+        NavigationView {
+            VStack {
+                BleDeviceList(BlePeripherals: bleManager.peripherals)
+                Spacer()
+                
+                // Check and warn if bluetooth is off
+                if bleManager.isSwitchedOn {
+                    Toggle("Scan for devices", isOn: self.$bleManager.isScanning).padding()
+                    
                 }
-            }.padding()
-            
-            // Warn if bluetooth is off
-            if !bleManager.isSwitchedOn {
-                Text("Bluetooth is NOT switched on!")
-                    .foregroundColor(.red)
+                else  {
+                    Text("Bluetooth is NOT switched on!")
+                        .foregroundColor(.red)
+                }
+                
             }
-            
-            Spacer()
-            
-            //
-            if (self.bleManager.isScanning ) {
-                Button(action: {
-                    self.bleManager.stopScanning()
-                }) {
-                    Text("Stop Scanning")
-                }
-            } else {
-                Button(action: {
-                    self.bleManager.startScanning()
-                }) {
-                    Text("Start Scanning")
-                }
-            }
-            
-            Spacer()
-            
+            .navigationTitle("\(bleManager.peripherals.count) BLE Devices")
         }
     }
 }
@@ -55,3 +31,68 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+// Device List Layout
+struct BleDeviceList: View {
+    var BlePeripherals = [Peripheral]()
+    
+    var body: some View {
+        List(BlePeripherals) {
+            peripheral in HStack() {
+                BleDevice(name: peripheral.name, uuid: peripheral.uuid.uuidString, rssi: peripheral.rssi)
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+}
+
+
+#if DEBUG
+struct BleDeviceListPreview: PreviewProvider {
+    static var BLEDevices = [
+        Peripheral(uuid: UUID(), name: "item one", rssi: -32),
+        Peripheral(uuid: UUID(), name: "item two", rssi: -32),
+        Peripheral(uuid: UUID(), name: "item three", rssi: -32)
+    ]
+    
+    
+    static var previews: some View {
+        NavigationView {
+            VStack {
+                BleDeviceList(BlePeripherals: BLEDevices)
+            }.navigationTitle("\(BLEDevices.count) BLE Devices")
+        }
+    }
+}
+#endif
+
+// List Item layout
+struct BleDevice: View {
+    var name: String
+    var uuid: String
+    var rssi: Int
+    
+    var body: some View {
+        HStack(){
+            VStack(alignment: .leading) {
+                Text(name)
+                Text(uuid)
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+            }
+            Spacer()
+            Text("(\(String(rssi)))")
+                .font(.caption)
+        }
+        //        .background(Color.red)
+        
+    }
+}
+
+#if DEBUG
+struct BLEDeviceRowPreview: PreviewProvider {
+    static var previews: some View {
+        BleDevice(name: "test", uuid: "2562", rssi: -32)
+    }
+}
+#endif

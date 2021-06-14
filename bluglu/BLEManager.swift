@@ -13,7 +13,20 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     var myCentral: CBCentralManager!
     
     @Published var isSwitchedOn = false
-    @Published var isScanning = false
+    
+    @Published var isScanning = false {
+        didSet {
+            if !isScanning {
+                print("Scanning Stopped")
+                myCentral.stopScan()
+            }
+            else if isScanning {
+                print("Scanning Begins")
+                myCentral.scanForPeripherals(withServices: nil, options: nil)
+            }
+        }
+    }
+    
     @Published var peripherals = [Peripheral]()
     
     override init() {
@@ -53,15 +66,4 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         }
     }
     
-    func startScanning() {
-        print("startScanning")
-        myCentral.scanForPeripherals(withServices: nil, options: nil)
-        isScanning = true
-    }
-    
-    func stopScanning() {
-        print("stopScanning")
-        myCentral.stopScan()
-        isScanning = false
-    }
 }
