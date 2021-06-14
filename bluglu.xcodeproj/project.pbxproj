@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16C3E6732676F58900A973AA /* blugluApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3E6722676F58900A973AA /* blugluApp.swift */; };
+		16C3E6752676F58900A973AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3E6742676F58900A973AA /* ContentView.swift */; };
+		16C3E6772676F58900A973AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C3E6762676F58900A973AA /* Assets.xcassets */; };
+		16C3E67A2676F58900A973AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C3E6792676F58900A973AA /* Preview Assets.xcassets */; };
+		16C3E6852676F58900A973AA /* blugluTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3E6842676F58900A973AA /* blugluTests.swift */; };
+		16C3E6902676F58900A973AA /* blugluUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3E68F2676F58900A973AA /* blugluUITests.swift */; };
+		16C3E69E2676F62000A973AA /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3E69D2676F62000A973AA /* BLEManager.swift */; };
+		16C3E6A02676F7BF00A973AA /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3E69F2676F7BF00A973AA /* Peripheral.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16C3E6812676F58900A973AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16C3E6672676F58900A973AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16C3E66E2676F58900A973AA;
+			remoteInfo = bluglu;
+		};
+		16C3E68C2676F58900A973AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16C3E6672676F58900A973AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16C3E66E2676F58900A973AA;
+			remoteInfo = bluglu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16C3E66F2676F58900A973AA /* bluglu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluglu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C3E6722676F58900A973AA /* blugluApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blugluApp.swift; sourceTree = "<group>"; };
+		16C3E6742676F58900A973AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		16C3E6762676F58900A973AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16C3E6792676F58900A973AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16C3E67B2676F58900A973AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C3E6802676F58900A973AA /* blugluTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blugluTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C3E6842676F58900A973AA /* blugluTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blugluTests.swift; sourceTree = "<group>"; };
+		16C3E6862676F58900A973AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C3E68B2676F58900A973AA /* blugluUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blugluUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C3E68F2676F58900A973AA /* blugluUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blugluUITests.swift; sourceTree = "<group>"; };
+		16C3E6912676F58900A973AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C3E69D2676F62000A973AA /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		16C3E69F2676F7BF00A973AA /* Peripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16C3E66C2676F58900A973AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C3E67D2676F58900A973AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C3E6882676F58900A973AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16C3E6662676F58900A973AA = {
+			isa = PBXGroup;
+			children = (
+				16C3E6712676F58900A973AA /* bluglu */,
+				16C3E6832676F58900A973AA /* blugluTests */,
+				16C3E68E2676F58900A973AA /* blugluUITests */,
+				16C3E6702676F58900A973AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16C3E6702676F58900A973AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16C3E66F2676F58900A973AA /* bluglu.app */,
+				16C3E6802676F58900A973AA /* blugluTests.xctest */,
+				16C3E68B2676F58900A973AA /* blugluUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16C3E6712676F58900A973AA /* bluglu */ = {
+			isa = PBXGroup;
+			children = (
+				16C3E69D2676F62000A973AA /* BLEManager.swift */,
+				16C3E6722676F58900A973AA /* blugluApp.swift */,
+				16C3E6742676F58900A973AA /* ContentView.swift */,
+				16C3E6762676F58900A973AA /* Assets.xcassets */,
+				16C3E67B2676F58900A973AA /* Info.plist */,
+				16C3E6782676F58900A973AA /* Preview Content */,
+				16C3E69F2676F7BF00A973AA /* Peripheral.swift */,
+			);
+			path = bluglu;
+			sourceTree = "<group>";
+		};
+		16C3E6782676F58900A973AA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				16C3E6792676F58900A973AA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16C3E6832676F58900A973AA /* blugluTests */ = {
+			isa = PBXGroup;
+			children = (
+				16C3E6842676F58900A973AA /* blugluTests.swift */,
+				16C3E6862676F58900A973AA /* Info.plist */,
+			);
+			path = blugluTests;
+			sourceTree = "<group>";
+		};
+		16C3E68E2676F58900A973AA /* blugluUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16C3E68F2676F58900A973AA /* blugluUITests.swift */,
+				16C3E6912676F58900A973AA /* Info.plist */,
+			);
+			path = blugluUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16C3E66E2676F58900A973AA /* bluglu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C3E6942676F58900A973AA /* Build configuration list for PBXNativeTarget "bluglu" */;
+			buildPhases = (
+				16C3E66B2676F58900A973AA /* Sources */,
+				16C3E66C2676F58900A973AA /* Frameworks */,
+				16C3E66D2676F58900A973AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bluglu;
+			productName = bluglu;
+			productReference = 16C3E66F2676F58900A973AA /* bluglu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16C3E67F2676F58900A973AA /* blugluTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C3E6972676F58900A973AA /* Build configuration list for PBXNativeTarget "blugluTests" */;
+			buildPhases = (
+				16C3E67C2676F58900A973AA /* Sources */,
+				16C3E67D2676F58900A973AA /* Frameworks */,
+				16C3E67E2676F58900A973AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16C3E6822676F58900A973AA /* PBXTargetDependency */,
+			);
+			name = blugluTests;
+			productName = blugluTests;
+			productReference = 16C3E6802676F58900A973AA /* blugluTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16C3E68A2676F58900A973AA /* blugluUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C3E69A2676F58900A973AA /* Build configuration list for PBXNativeTarget "blugluUITests" */;
+			buildPhases = (
+				16C3E6872676F58900A973AA /* Sources */,
+				16C3E6882676F58900A973AA /* Frameworks */,
+				16C3E6892676F58900A973AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16C3E68D2676F58900A973AA /* PBXTargetDependency */,
+			);
+			name = blugluUITests;
+			productName = blugluUITests;
+			productReference = 16C3E68B2676F58900A973AA /* blugluUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16C3E6672676F58900A973AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					16C3E66E2676F58900A973AA = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					16C3E67F2676F58900A973AA = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 16C3E66E2676F58900A973AA;
+					};
+					16C3E68A2676F58900A973AA = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 16C3E66E2676F58900A973AA;
+					};
+				};
+			};
+			buildConfigurationList = 16C3E66A2676F58900A973AA /* Build configuration list for PBXProject "bluglu" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16C3E6662676F58900A973AA;
+			productRefGroup = 16C3E6702676F58900A973AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16C3E66E2676F58900A973AA /* bluglu */,
+				16C3E67F2676F58900A973AA /* blugluTests */,
+				16C3E68A2676F58900A973AA /* blugluUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16C3E66D2676F58900A973AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C3E67A2676F58900A973AA /* Preview Assets.xcassets in Resources */,
+				16C3E6772676F58900A973AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C3E67E2676F58900A973AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C3E6892676F58900A973AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16C3E66B2676F58900A973AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C3E6752676F58900A973AA /* ContentView.swift in Sources */,
+				16C3E69E2676F62000A973AA /* BLEManager.swift in Sources */,
+				16C3E6732676F58900A973AA /* blugluApp.swift in Sources */,
+				16C3E6A02676F7BF00A973AA /* Peripheral.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C3E67C2676F58900A973AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C3E6852676F58900A973AA /* blugluTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C3E6872676F58900A973AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C3E6902676F58900A973AA /* blugluUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16C3E6822676F58900A973AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16C3E66E2676F58900A973AA /* bluglu */;
+			targetProxy = 16C3E6812676F58900A973AA /* PBXContainerItemProxy */;
+		};
+		16C3E68D2676F58900A973AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16C3E66E2676F58900A973AA /* bluglu */;
+			targetProxy = 16C3E68C2676F58900A973AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16C3E6922676F58900A973AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16C3E6932676F58900A973AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16C3E6952676F58900A973AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"bluglu/Preview Content\"";
+				DEVELOPMENT_TEAM = Y7PGSKZAS7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = bluglu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bahhumbug.bluglu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16C3E6962676F58900A973AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"bluglu/Preview Content\"";
+				DEVELOPMENT_TEAM = Y7PGSKZAS7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = bluglu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bahhumbug.bluglu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16C3E6982676F58900A973AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7PGSKZAS7;
+				INFOPLIST_FILE = blugluTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bahhumbug.blugluTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bluglu.app/bluglu";
+			};
+			name = Debug;
+		};
+		16C3E6992676F58900A973AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7PGSKZAS7;
+				INFOPLIST_FILE = blugluTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bahhumbug.blugluTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bluglu.app/bluglu";
+			};
+			name = Release;
+		};
+		16C3E69B2676F58900A973AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7PGSKZAS7;
+				INFOPLIST_FILE = blugluUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bahhumbug.blugluUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = bluglu;
+			};
+			name = Debug;
+		};
+		16C3E69C2676F58900A973AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7PGSKZAS7;
+				INFOPLIST_FILE = blugluUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bahhumbug.blugluUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = bluglu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16C3E66A2676F58900A973AA /* Build configuration list for PBXProject "bluglu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C3E6922676F58900A973AA /* Debug */,
+				16C3E6932676F58900A973AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16C3E6942676F58900A973AA /* Build configuration list for PBXNativeTarget "bluglu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C3E6952676F58900A973AA /* Debug */,
+				16C3E6962676F58900A973AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16C3E6972676F58900A973AA /* Build configuration list for PBXNativeTarget "blugluTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C3E6982676F58900A973AA /* Debug */,
+				16C3E6992676F58900A973AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16C3E69A2676F58900A973AA /* Build configuration list for PBXNativeTarget "blugluUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C3E69B2676F58900A973AA /* Debug */,
+				16C3E69C2676F58900A973AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16C3E6672676F58900A973AA /* Project object */;
+}
